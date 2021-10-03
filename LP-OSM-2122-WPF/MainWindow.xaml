@@ -1,0 +1,50 @@
+﻿<Window x:Class="LS_OSM_2122_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LS_OSM_2122_WPF"
+        xmlns:controls="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls"
+        mc:Ignorable="d"
+        Title="Laboratori de Programacio (Pràctica 2021-2022)" Height="695" Width="950">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Name="menuCheck" Grid.Column="0" Background="Beige" Grid.ColumnSpan="2">
+            <DockPanel>
+                <Menu DockPanel.Dock="Top">
+                    <MenuItem Header="_Fitxer">
+                        <MenuItem Header="_Obrir" Click="MenuItem_Click"/>
+                    </MenuItem>
+                </Menu>
+            </DockPanel>
+
+            <Grid Name="gridMenuCheck">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Background="Beige"  Grid.Row="1" Orientation="Vertical">
+                    <Label>Desde: </Label>
+                    <ComboBox Margin="10" Name="cmbFromPois"></ComboBox>
+                    <Label>A:</Label>
+                    <ComboBox Margin="10" Name="cmbToPois"></ComboBox>
+                    <Button Content="Visualitza Punts de Interes" Width="150" Height="25" Click="VisualitzaPdis_Click" Margin="10"/>
+                    <Button Content="Visualitza Camins" Width="150" Height="25" Click="VisualitzaCamins_Click" Margin="10"/>
+                    <Button Content="Neteja visualtzació" Width="150" Height="25" Click="Clear_Click" Margin="10"/>
+                    <Button Content="Busca Cami més Curt" Width="150" Height="25" Click="ShortestPath_Click" Margin="10"/>
+
+                    <Border BorderThickness="5px" BorderBrush="Bisque"  Margin="0 10 0 0">
+                        <TextBlock Height="100" Background="LightGray"  Name="logText"/>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <controls:MapControl Grid.Column="2" x:Name="mapControl"/>
+    </Grid>
+</Window>

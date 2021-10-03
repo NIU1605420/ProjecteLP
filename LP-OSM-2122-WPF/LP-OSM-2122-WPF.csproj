@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+	  <TargetFramework>netcoreapp3.1</TargetFramework>
+	  <Platform>x86;x64</Platform>
+	  <!-- <TargetFramework>net.0-windows10.0.19041.0</TargetFramework>-->
+    <RootNamespace>LP_OSM_2122_WPF</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+    <ItemGroup>
+		<ProjectReference Include="../LP-OSM-2122-DLL/LP-OSM-2122-DLL.vcxproj" />
+<!--		<Content Update="../Debug/LP-OSM-2122-DLL.dll" CopyToOutputDirectory="PreserveNewest"/> -->
+
+		<Content Include="..\x64\$(Configuration)\*.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+
+	</ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Toolkit.Wpf.UI.Controls" Version="6.1.2" />
+      <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.19041.1" />
+    </ItemGroup>
+
+
+</Project>
