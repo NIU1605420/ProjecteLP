@@ -168,6 +168,8 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="CamiBase.h" />
     <ClInclude Include="PuntDeInteresBase.h" />
+    <ClInclude Include="PuntDeInteresBotigaSolucio.h" />
+    <ClInclude Include="PuntDeInteresRestaurantSolucio.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="XML4OSMUtil.h" />
   </ItemGroup>
