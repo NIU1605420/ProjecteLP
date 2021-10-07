@@ -45,6 +45,12 @@
     <ClInclude Include="MapaSolucio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PuntDeInteresBotigaSolucio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PuntDeInteresRestaurantSolucio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
