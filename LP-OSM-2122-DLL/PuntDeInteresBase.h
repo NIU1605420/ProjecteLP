@@ -16,5 +16,5 @@ class PuntDeInteresBase {
 		virtual std::string getName();
 		Coordinate getCoord();
 		virtual unsigned int getColor();
-
+		//Prova;
 };
