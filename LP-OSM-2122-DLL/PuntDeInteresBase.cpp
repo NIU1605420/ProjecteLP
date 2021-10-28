@@ -1,5 +1,5 @@
-#include "pch.h"
 #include "PuntDeInteresBase.h"
+#include "pch.h"
 
 
 PuntDeInteresBase::PuntDeInteresBase() {
@@ -23,5 +23,3 @@ std::string PuntDeInteresBase::getName() {
 unsigned int PuntDeInteresBase::getColor() {
 	return 0xFFA500;
 }
-
-

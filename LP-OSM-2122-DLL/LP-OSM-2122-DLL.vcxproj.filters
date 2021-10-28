@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\PuntsDeInteres">
+      <UniqueIdentifier>{f42f7df6-751a-4448-9393-1f082c18618c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -72,7 +75,13 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PuntDeInteresBase.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\PuntsDeInteres</Filter>
+    </ClCompile>
+    <ClCompile Include="PuntDeInteresBotigaSolucio.cpp">
+      <Filter>Source Files\PuntsDeInteres</Filter>
+    </ClCompile>
+    <ClCompile Include="PuntDeInteresRestaurantSolucio.cpp">
+      <Filter>Source Files\PuntsDeInteres</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
