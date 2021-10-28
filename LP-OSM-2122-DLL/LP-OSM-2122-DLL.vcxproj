@@ -164,9 +164,12 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="MapaRender.h" />
     <ClInclude Include="MapaBase.h" />
+    <ClInclude Include="MapaSolucio.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="CamiBase.h" />
     <ClInclude Include="PuntDeInteresBase.h" />
+    <ClInclude Include="PuntDeInteresBotigaSolucio.h" />
+    <ClInclude Include="PuntDeInteresRestaurantSolucio.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="XML4OSMUtil.h" />
   </ItemGroup>
