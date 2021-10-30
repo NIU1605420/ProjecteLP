@@ -10,8 +10,8 @@ public:
 	CamiSolucio() {}
 	~CamiSolucio() {}
 
-	vector<Coordinate> getCamiCoords() { return m_Coordinates; }
+	vector<Coordinate> getCamiCoords();
 
 private:
-	vector<Coordinate> m_Coordinates;
+	vector<Coordinate> m_coordinates;
 };

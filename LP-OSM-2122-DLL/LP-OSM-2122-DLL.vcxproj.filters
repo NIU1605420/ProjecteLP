@@ -19,6 +19,9 @@
     <Filter Include="Header Files\CamiClass">
       <UniqueIdentifier>{15853aaf-77da-43bb-8926-f31c9793a8aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\CamiClass">
+      <UniqueIdentifier>{19f2baad-a798-4e2d-b3a8-f69f11d18ebb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -88,6 +91,9 @@
     </ClCompile>
     <ClCompile Include="PuntDeInteresRestaurantSolucio.cpp">
       <Filter>Source Files\PuntsDeInteres</Filter>
+    </ClCompile>
+    <ClCompile Include="CamiSolucio.cpp">
+      <Filter>Source Files\CamiClass</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

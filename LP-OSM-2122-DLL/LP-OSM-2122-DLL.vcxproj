@@ -175,6 +175,7 @@
     <ClInclude Include="XML4OSMUtil.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CamiSolucio.cpp" />
     <ClCompile Include="DLL-Bridge.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="MapaRender.cpp" />
