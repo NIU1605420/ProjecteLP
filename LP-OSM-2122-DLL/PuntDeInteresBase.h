@@ -3,18 +3,19 @@
 #include <string>
 #include "Common.h"
 
+using namespace std;
+
 class PuntDeInteresBase {
 
 	private:
 		Coordinate m_coord;
-		std::string m_name;
+		string m_name;
 
 	public:		
 		PuntDeInteresBase();
-		PuntDeInteresBase(Coordinate coord, std::string name);
+		PuntDeInteresBase(Coordinate coord, string name);
 
-		virtual std::string getName();
 		Coordinate getCoord();
+		virtual string getName();
 		virtual unsigned int getColor();
-		//Prova;
 };
