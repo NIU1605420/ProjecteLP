@@ -92,5 +92,8 @@
     <ClCompile Include="PuntDeInteresRestaurantSolucio.cpp">
       <Filter>Source Files\PuntsDeInteres</Filter>
     </ClCompile>
+    <ClCompile Include="CamiSolucio.cpp">
+      <Filter>Source Files\CamiClass</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
