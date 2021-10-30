@@ -54,9 +54,6 @@
     <ClInclude Include="MapaRender.h">
       <Filter>Header Files\MapaClasses</Filter>
     </ClInclude>
-    <ClInclude Include="MapaSolucio.h">
-      <Filter>Header Files\MapaClasses</Filter>
-    </ClInclude>
     <ClInclude Include="PuntDeInteresBase.h">
       <Filter>Header Files\PuntDeInteres</Filter>
     </ClInclude>
@@ -74,6 +71,9 @@
     </ClInclude>
     <ClInclude Include="MapaSolucio.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MapaSolucio.h">
+      <Filter>Header Files\MapaClasses</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
