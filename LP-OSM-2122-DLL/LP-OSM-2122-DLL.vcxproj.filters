@@ -16,6 +16,9 @@
     <Filter Include="Source Files\PuntsDeInteres">
       <UniqueIdentifier>{f42f7df6-751a-4448-9393-1f082c18618c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\CamiClass">
+      <UniqueIdentifier>{15853aaf-77da-43bb-8926-f31c9793a8aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -36,9 +39,6 @@
     <ClInclude Include="Common.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CamiBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -53,6 +53,12 @@
     </ClInclude>
     <ClInclude Include="PuntDeInteresRestaurantSolucio.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CamiBase.h">
+      <Filter>Header Files\CamiClass</Filter>
+    </ClInclude>
+    <ClInclude Include="CamiSolucio.h">
+      <Filter>Header Files\CamiClass</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
