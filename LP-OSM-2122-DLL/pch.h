@@ -11,5 +11,6 @@
 #include "framework.h"
 #include "PuntDeInteresBotigaSolucio.h"
 #include "PuntDeInteresRestaurantSolucio.h"
+#include "MapaSolucio.h"
 
 #endif //PCH_H

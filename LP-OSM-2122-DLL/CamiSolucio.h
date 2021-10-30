@@ -1,5 +1,5 @@
 #pragma once
-
+#include "pch.h"
 #include "CamiBase.h"
 
 using namespace std;
