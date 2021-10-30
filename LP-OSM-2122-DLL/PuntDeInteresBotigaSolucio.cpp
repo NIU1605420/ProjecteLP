@@ -7,17 +7,17 @@ unsigned int  PuntDeInteresBotigaSolucio::getColor()
 {
 	switch (m_typeOfShop)
 	{
-	case Shops::SuperMarket:
+	case SuperMarket:
 	{
 		return 0xA5BE00;
 		break;
 	}
-	case Shops::Tobacco:
+	case Tobacco:
 	{
 		return 0xFFAD69;
 		break;
 	}
-	case Shops::Bakery:
+	case Bakery:
 	{
 		return 0xE85D75;
 		break;

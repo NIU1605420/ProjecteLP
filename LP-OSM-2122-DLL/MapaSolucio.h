@@ -10,5 +10,5 @@ public:
 	void getPdis(std::vector<PuntDeInteresBase*>& pdis) {};
 
 private:
-
+	vector<PuntDeInteresBase*> m_InterestPoints;
 };
