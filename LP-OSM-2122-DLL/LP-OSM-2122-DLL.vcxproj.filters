@@ -16,11 +16,20 @@
     <Filter Include="Source Files\PuntsDeInteres">
       <UniqueIdentifier>{f42f7df6-751a-4448-9393-1f082c18618c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\CamiClass">
-      <UniqueIdentifier>{15853aaf-77da-43bb-8926-f31c9793a8aa}</UniqueIdentifier>
+    <Filter Include="Header Files\MapaClasses">
+      <UniqueIdentifier>{10aefd45-fd48-472a-9d40-b367270fab03}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\PuntDeInteresClass">
-      <UniqueIdentifier>{08cf001e-2b27-4135-bfdc-693b7cecb6ca}</UniqueIdentifier>
+    <Filter Include="Header Files\PuntDeInteres">
+      <UniqueIdentifier>{a541f7c7-0321-433d-a31b-5c7a2b040474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CamiClasses">
+      <UniqueIdentifier>{14745f90-80fa-4e00-bc9f-1d8bb5b90cd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Mapa">
+      <UniqueIdentifier>{b16db62a-72fd-44b0-9ec8-3c802816ee0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cami">
+      <UniqueIdentifier>{6e543d55-8482-4347-a725-b7232aaa78cc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -30,13 +39,7 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MapaRender.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="XML4OSMUtil.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MapaBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Common.h">
@@ -45,23 +48,32 @@
     <ClInclude Include="Util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MapaBase.h">
+      <Filter>Header Files\MapaClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="MapaRender.h">
+      <Filter>Header Files\MapaClasses</Filter>
+    </ClInclude>
     <ClInclude Include="MapaSolucio.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CamiBase.h">
-      <Filter>Header Files\CamiClass</Filter>
-    </ClInclude>
-    <ClInclude Include="CamiSolucio.h">
-      <Filter>Header Files\CamiClass</Filter>
+      <Filter>Header Files\MapaClasses</Filter>
     </ClInclude>
     <ClInclude Include="PuntDeInteresBase.h">
-      <Filter>Header Files\PuntDeInteresClass</Filter>
+      <Filter>Header Files\PuntDeInteres</Filter>
     </ClInclude>
     <ClInclude Include="PuntDeInteresBotigaSolucio.h">
-      <Filter>Header Files\PuntDeInteresClass</Filter>
+      <Filter>Header Files\PuntDeInteres</Filter>
     </ClInclude>
     <ClInclude Include="PuntDeInteresRestaurantSolucio.h">
-      <Filter>Header Files\PuntDeInteresClass</Filter>
+      <Filter>Header Files\PuntDeInteres</Filter>
+    </ClInclude>
+    <ClInclude Include="CamiBase.h">
+      <Filter>Header Files\CamiClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="CamiSolucio.h">
+      <Filter>Header Files\CamiClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="MapaSolucio.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -72,9 +84,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DLL-Bridge.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MapaRender.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="XML4OSMUtil.cpp">
@@ -92,8 +101,14 @@
     <ClCompile Include="PuntDeInteresRestaurantSolucio.cpp">
       <Filter>Source Files\PuntsDeInteres</Filter>
     </ClCompile>
+    <ClCompile Include="MapaRender.cpp">
+      <Filter>Source Files\Mapa</Filter>
+    </ClCompile>
+    <ClCompile Include="MapaSolucio.cpp">
+      <Filter>Source Files\Mapa</Filter>
+    </ClCompile>
     <ClCompile Include="CamiSolucio.cpp">
-      <Filter>Source Files\CamiClass</Filter>
+      <Filter>Source Files\Cami</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

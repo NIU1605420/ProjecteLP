@@ -1,17 +1,17 @@
 #pragma once
-#include "Common.h"
+
 #include "CamiBase.h"
 
 using namespace std;
 
-class CamiSolucio : public CamiBase 
+class CamiSolucio : public CamiBase
 {
 public:
 	CamiSolucio() {}
 	~CamiSolucio() {}
 
-	vector<Coordinate> getCamiCoords();
+	std::vector<Coordinate> getCamiCoords();
 
 private:
-	vector<Coordinate> m_coordinates;
+	vector<Coordinate> m_Coordinates;
 };

@@ -179,6 +179,7 @@
     <ClCompile Include="DLL-Bridge.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="MapaRender.cpp" />
+    <ClCompile Include="MapaSolucio.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

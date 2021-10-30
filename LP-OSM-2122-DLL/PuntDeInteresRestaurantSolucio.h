@@ -1,25 +1,18 @@
 #pragma once
 #include "PuntDeInteresBase.h"
+#include <string>
 using namespace std;
-
-enum Cuisine
-{
-	Default = -1,
-	Pizza,
-	Chinese
-};
-
 
 class PuntDeInteresRestaurantSolucio: public PuntDeInteresBase
 {
 public:
 	PuntDeInteresRestaurantSolucio() {};
-	PuntDeInteresRestaurantSolucio(Coordinate coordinate, string name, Cuisine cuisine, bool InmobilAssistant) : PuntDeInteresBase(coordinate, name), m_Cuisine(cuisine), m_Inmobile_Assistance(InmobilAssistant) {}
+	PuntDeInteresRestaurantSolucio(Coordinate coordinate, string  name, string cuisine, bool inmobileAssistant) :PuntDeInteresBase(coordinate, name), m_Cuisine(cuisine), m_Inmobile_Assistance(inmobileAssistant) {}
 	~PuntDeInteresRestaurantSolucio() {};
 
 	string getName() { return PuntDeInteresBase::getName(); }
 	unsigned int getColor();
 private:
-	Cuisine m_Cuisine; 
+	string m_Cuisine;
 	bool m_Inmobile_Assistance;
 };
