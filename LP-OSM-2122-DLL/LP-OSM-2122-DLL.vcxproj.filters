@@ -72,6 +72,9 @@
     <ClInclude Include="CamiSolucio.h">
       <Filter>Header Files\CamiClasses</Filter>
     </ClInclude>
+    <ClInclude Include="MapaSolucio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
