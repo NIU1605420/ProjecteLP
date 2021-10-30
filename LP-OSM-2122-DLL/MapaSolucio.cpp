@@ -15,11 +15,6 @@ void MapaSolucio::getPdis(std::vector<PuntDeInteresBase*>&pdis)
 	restaurantCoordinate.lat = 2.1406477;
 
 	m_InterestPoints.push_back(new PuntDeInteresBotigaSolucio(shopCoordinate, "La Millor Pastisseria", Bakery));
-	m_InterestPoints.push_back(new PuntDeInteresRestaurantSolucio(restaurantCoordinate, "El Millor Restaurant", , true));
+	m_InterestPoints.push_back(new PuntDeInteresRestaurantSolucio(restaurantCoordinate, "El Millor Restaurant", "regional", true));
 
-}
-
-void MapaSolucio::getCamins(std::vector<CamiBase*>& camins)
-{
-	camins.push_back(new CamiSolucio());
 }

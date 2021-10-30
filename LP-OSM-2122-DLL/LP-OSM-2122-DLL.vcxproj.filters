@@ -28,6 +28,9 @@
     <Filter Include="Source Files\Mapa">
       <UniqueIdentifier>{b16db62a-72fd-44b0-9ec8-3c802816ee0e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Cami">
+      <UniqueIdentifier>{6e543d55-8482-4347-a725-b7232aaa78cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -66,6 +69,9 @@
     <ClInclude Include="CamiBase.h">
       <Filter>Header Files\CamiClasses</Filter>
     </ClInclude>
+    <ClInclude Include="CamiSolucio.h">
+      <Filter>Header Files\CamiClasses</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -97,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="MapaSolucio.cpp">
       <Filter>Source Files\Mapa</Filter>
+    </ClCompile>
+    <ClCompile Include="CamiSolucio.cpp">
+      <Filter>Source Files\Cami</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
