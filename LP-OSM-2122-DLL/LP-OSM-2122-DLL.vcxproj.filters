@@ -19,6 +19,9 @@
     <Filter Include="Header Files\CamiClass">
       <UniqueIdentifier>{15853aaf-77da-43bb-8926-f31c9793a8aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\PuntDeInteresClass">
+      <UniqueIdentifier>{08cf001e-2b27-4135-bfdc-693b7cecb6ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -42,16 +45,7 @@
     <ClInclude Include="Util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PuntDeInteresBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MapaSolucio.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PuntDeInteresBotigaSolucio.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PuntDeInteresRestaurantSolucio.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CamiBase.h">
@@ -59,6 +53,15 @@
     </ClInclude>
     <ClInclude Include="CamiSolucio.h">
       <Filter>Header Files\CamiClass</Filter>
+    </ClInclude>
+    <ClInclude Include="PuntDeInteresBase.h">
+      <Filter>Header Files\PuntDeInteresClass</Filter>
+    </ClInclude>
+    <ClInclude Include="PuntDeInteresBotigaSolucio.h">
+      <Filter>Header Files\PuntDeInteresClass</Filter>
+    </ClInclude>
+    <ClInclude Include="PuntDeInteresRestaurantSolucio.h">
+      <Filter>Header Files\PuntDeInteresClass</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
