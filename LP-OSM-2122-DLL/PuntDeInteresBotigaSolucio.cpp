@@ -5,27 +5,12 @@ using namespace std;
 
 unsigned int  PuntDeInteresBotigaSolucio::getColor()
 {
-	switch (m_typeOfShop)
-	{
-	case SuperMarket:
-	{
+	if (m_typeOfShop == "supermarket")
 		return 0xA5BE00;
-		break;
-	}
-	case Tobacco:
-	{
+	else if (m_typeOfShop == "tobacco")
 		return 0xFFAD69;
-		break;
-	}
-	case Bakery:
-	{
+	else if (m_typeOfShop == "bakery")
 		return 0xE85D75;
-		break;
-	}
-	default:
-	{
+	else 
 		return 0xEFD6AC;
-		break;
-	}
-	}
 }

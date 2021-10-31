@@ -3,23 +3,23 @@
 
 using namespace std;
 
-/*	The objective of creating the Enum Shop is not having Magic numbers;	*/
-enum Shop
-	{
-		SuperMarket = 0,
-		Tobacco,
-		Bakery
-};
-
 class PuntDeInteresBotigaSolucio: public PuntDeInteresBase
 {
 public:
 	PuntDeInteresBotigaSolucio() {}
-	PuntDeInteresBotigaSolucio(Coordinate coordinate, string  name, Shop typeOfShop) :PuntDeInteresBase(coordinate, name), m_typeOfShop(typeOfShop) {}
+	PuntDeInteresBotigaSolucio(PuntDeInteresBotigaSolucio& puntDeInteresBotigaSolucio) 
+		:PuntDeInteresBase(puntDeInteresBotigaSolucio.getCoord(), puntDeInteresBotigaSolucio.getName()),
+		m_typeOfShop(puntDeInteresBotigaSolucio.m_typeOfShop) {}
+	PuntDeInteresBotigaSolucio(Coordinate coordinate, string  name, string typeOfShop) 
+		:PuntDeInteresBase(coordinate, name),
+		m_typeOfShop(typeOfShop) {}
 	~PuntDeInteresBotigaSolucio() {};
 
+	PuntDeInteresBotigaSolucio* clone() { return new PuntDeInteresBotigaSolucio(*this); }
 	string getName() { return PuntDeInteresBase::getName(); }
 	unsigned int getColor();
+	void setTypeOfShop(string typeOfShop) { m_typeOfShop = typeOfShop; }
+
 private:
-	Shop m_typeOfShop;
+	string m_typeOfShop;
 };
