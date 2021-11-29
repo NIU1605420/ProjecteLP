@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "LP-OSM-2122-WPF": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
