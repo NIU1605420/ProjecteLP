@@ -27,5 +27,5 @@ public:
 
 private:
 	vector<PuntDeInteresBase*> m_InterestPoints;
-	vector<CamiBase*> m_BaseWays;
+	vector<CamiSolucio*> m_BaseWays;
 };
