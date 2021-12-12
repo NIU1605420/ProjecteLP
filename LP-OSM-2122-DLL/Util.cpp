@@ -66,3 +66,23 @@ double Util::DistanciaHaversine(double lat1, double lon1, double lat2, double lo
 double Util::DistanciaHaversine(Coordinate px1, Coordinate px2) {
     return DistanciaHaversine(px1.lat, px1.lon, px2.lat, px2.lon);
 }
+
+Coordinate Util::calcularPuntCentral(std::vector<Coordinate>& punts) {
+    double x = 0.0f, y = 0.0f, z = 0.0f;
+    for (Coordinate point : punts) {
+        x += cos(Util::deg2Rad(point.lat)) * cos(Util::deg2Rad(point.lon));
+        y += cos(Util::deg2Rad(point.lat)) * sin(Util::deg2Rad(point.lon));
+        z += sin(Util::deg2Rad(point.lon));
+    }
+
+    x = x / punts.size();
+    y = y / punts.size();
+    z = z / punts.size();
+
+    double lat = rad2Deg(atan2(y, z));
+    double lon = rad2Deg(atan2(z, sqrt(x * x + y * y)));
+       
+    return Coordinate{ lat, lon };
+}
+
+

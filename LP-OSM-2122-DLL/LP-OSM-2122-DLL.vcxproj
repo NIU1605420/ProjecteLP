@@ -160,6 +160,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Ball.h" />
+    <ClInclude Include="BallTree.h" />
     <ClInclude Include="CamiSolucio.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="framework.h" />

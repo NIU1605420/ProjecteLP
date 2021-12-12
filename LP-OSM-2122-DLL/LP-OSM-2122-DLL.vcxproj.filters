@@ -36,9 +36,6 @@
     <ClInclude Include="CamiBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Util.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="PuntDeInteresBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -55,6 +52,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Graf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BallTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -74,9 +80,6 @@
     <ClCompile Include="XML4OSMUtil.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Util.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="PuntDeInteresBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -90,6 +93,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PuntDeInteresRestaurantSolucio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
