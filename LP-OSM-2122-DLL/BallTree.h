@@ -19,10 +19,47 @@ public:
 	void inOrdre(vector<list<Coordinate>>& out);
 	void postOrdre(vector<list<Coordinate>>& out);
 	void preOrdre(vector<list<Coordinate>>& out);
+	Coordinate nodeMesProper(Coordinate pdi, Coordinate& Q, Ball* bola);
 
 private:
 	Ball* m_pepe;
 };
+
+Coordinate nodeMesProper(Coordinate pdi, Coordinate& Q, Ball* bola)
+{
+	Coordinate point_Central = (*bola).getPivot();
+	double distance_point_1 = Util::DistanciaHaversine(pdi, point_Central);
+	double distance_point_2 = Util::DistanciaHaversine(Q, point_Central);
+
+	if (distance_point_1 - bola->getRadi() >= distance_point_2)
+		return Q;
+	if(((*bola).getEsquerre() == nullptr && (*bola).getDreta() == nullptr))
+	{
+		vector<Coordinate> vector_Coordinates = (*bola).getCoordenades();
+		double distance_point_i = Util::DistanciaHaversine(pdi, vector_Coordinates[0]);
+		double distance_point_Q = Util::DistanciaHaversine(pdi, Q);
+		if (distance_point_Q > distance_point_i)
+			Q = vector_Coordinates[0];
+	}
+	else
+	{
+		double distance_right_ball = Util::DistanciaHaversine(pdi, (*bola).getDreta()->getPivot());
+		double distance_left_ball = Util::DistanciaHaversine(pdi, (*bola).getEsquerre()->getPivot());
+
+		if (distance_right_ball < distance_left_ball) //Cerca de la bola x la derta i despres x l'esquerra
+		{
+			Q = nodeMesProper(pdi, Q, bola->getDreta());
+			Q = nodeMesProper(pdi, Q, bola->getEsquerre());
+		}
+		else // Cerca x la bola esquerra i despres x la dreta.
+		{
+			Q = nodeMesProper(pdi, Q, bola->getEsquerre());
+			Q = nodeMesProper(pdi, Q, bola->getDreta());
+		}
+	}
+	
+	return Q;
+}
 
 void BallTree::inOrdre(vector<list<Coordinate>>& out)
 {
@@ -96,12 +133,12 @@ void BallTree::preOrdre(vector<list<Coordinate>>& out)
 
 double maxDistance(vector<Coordinate> coordinates, Coordinate point, int index)
 {
-	double max_Distances = CalculateDistance(coordinates[0], point);
+	double max_Distances = Util::DistanciaHaversine(coordinates[0], point);
 	index = 0;
 
 	for (int it_vector = 1; it_vector < coordinates.size(); it_vector++)
 	{
-		auto aux_distance = CalculateDistance(coordinates[it_vector], point);
+		auto aux_distance = Util::DistanciaHaversine(coordinates[it_vector], point);
 		if (max_Distances < aux_distance)
 		{ 
 			max_Distances = aux_distance;
@@ -110,15 +147,6 @@ double maxDistance(vector<Coordinate> coordinates, Coordinate point, int index)
 	}
 
 	return max_Distances;
-}
-
-double CalculateDistance(Coordinate point_A, Coordinate point_B)
-{
-	double lat_Increment = Util::deg2Rad(point_B.lat - point_A.lat);
-	double lon_Increment = Util::deg2Rad(point_B.lon - point_A.lon);
-	double radical = pow(sin(lat_Increment / 2), 2) + pow(sin(lon_Increment / 2), 2) * cos(Util::deg2Rad(point_A.lat)) * cos(Util::deg2Rad(point_B.lat));
-	double distance = atan2(sqrt(radical), sqrt(1 - radical));
-	return distance;
 }
 
 BallTree::BallTree(Ball ball)
@@ -131,6 +159,7 @@ Ball* BallTree::construirBalls(vector<Coordinate> coordinates)
 	if (coordinates.size() > 1)
 	{
 		Ball* newBall = new Ball;
+		(*newBall).setCoordenades(coordinates);
 		Coordinate point_C = Util::calcularPuntCentral(coordinates);
 		(*newBall).setPivot(point_C);
 
@@ -145,8 +174,8 @@ Ball* BallTree::construirBalls(vector<Coordinate> coordinates)
 
 		for (int it_vector = 0; it_vector < coordinates.size(); it_vector++)
 		{
-			double first_Distance = CalculateDistance(coordinates[it_vector], coordinates[index_Point_B]);
-			double second_Distance = CalculateDistance(coordinates[it_vector], point_C);
+			double first_Distance = CalculateDistance(coordinates[it_vector], coordinates[index_Point_A]);
+			double second_Distance = CalculateDistance(coordinates[it_vector], coordinates[index_Point_B]);
 
 			if (first_Distance < second_Distance)
 				left_Vector.emplace_back(coordinates[it_vector]);
